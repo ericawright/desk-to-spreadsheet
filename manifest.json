@@ -1,0 +1,32 @@
+{
+  "manifest_version": 2,
+ 
+  "name": "Desk Scrape",
+  "description": "EAsily transfer info from Desk to Google docs",
+  "version": "1.0.0",
+ 
+  "browser_action": {
+  },
+  
+  "options_page": "options/options.html",
+
+  "background": {
+    "scripts": ["libraries/zepto.js","libraries/chromeps.js","content/background.js"]
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>",  "http://*/*", "https://*/*"],
+      "js": ["libraries/zepto.js", "libraries/chromeps.js", "content/content.js"],
+      "css": ["content/content.css"],
+      "all_frames": false
+    }
+  ],
+
+  "web_accessible_resources" : ["popup/popup.html"],
+
+  "permissions": [
+    "tabs"
+  ]
+  
+}
