@@ -17,3 +17,8 @@ chromeps.subscribe('commands', function(message) {
   }
 });
 
+function get_content(){
+  var subject = $('#ticket_subject').val();
+  var direct_link = $( "input[name='direct_link[subject]']" ).val();
+  console.log(subject, direct_link);
+};
