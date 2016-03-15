@@ -19,6 +19,10 @@ chromeps.subscribe('commands', function(message) {
 
 function get_content(){
   var subject = $('#ticket_subject').val();
-  var direct_link = $( "input[name='direct_link[subject]']" ).val();
-  console.log(subject, direct_link);
-};
+  var direct_link = $('.agent_ticket_section input[name="direct_link[subject]"]').val();
+  var customer_name = $('.idtab[data-tab="customer"] .a-details.a-ellipsis').text();
+  localStorage.setItem('mob_subject', subject);
+  localStorage.setItem('mob_direct_link', direct_link);
+  localStorage.setItem('mob_customer_name', customer_name);
+  console.log(subject, direct_link, customer_name, localStorage);
+}
