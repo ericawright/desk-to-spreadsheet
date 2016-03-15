@@ -1,26 +1,41 @@
 .overlay {
-  position: fixed;
-  top: 0%;
-  left: 0%;
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  opacity: .15;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: .15;
 }
 
 .wrapper {
-  background:#FFFFFF; 
-  width: 700px;
-  height: 200px;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+    background:#FFFFFF; 
+    width: 700px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-#ticket_notes{
-  width: 80%;
-  margin: 10%;
-  font-size: 1.2em;
-  line-height: 1.2em; 
+textarea {
+    width: 80%;
+    margin: 2%;
+    font-size: 1.1em;
+    line-height: 1.1em; 
+}
+
+#ticket_submit {
+    position: absolute;
+    background: #9d76d2;
+    border-color: #9d76d2;
+}
+
+#ticket_submit:hover {
+    border-color: #582f8f;
+    background: #582f8f;
+}
+
+#ticket_submit:disabled, #ticket_submit:disabled:hover{
+    border-color: #A9A9A9;
+    background: #A9A9A9;
 }
