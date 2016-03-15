@@ -15,6 +15,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    border: black solid 1px;
+    border-radius: 5px;
 }
 
 textarea {
@@ -25,14 +27,26 @@ textarea {
 }
 
 input {
-    width: 60%;
-    margin: 2%;
+    width: 50%;
+    margin: 2% 10% 3% 13%;
+}
+
+label {
+    float: left;
+    margin: 27px 5px 0 20px;
+    width: 52px;
 }
 
 #ticket_submit {
     position: absolute;
     background: #9d76d2;
     border-color: #9d76d2;
+    height: 40px;
+    color: #FFF;
+    font-size: 15px;
+    width: 110px;
+    bottom: 40px;
+    border-radius: 7px;
 }
 
 #ticket_submit:hover {

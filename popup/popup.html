@@ -6,10 +6,13 @@
 <body>
     <div class="overlay"></div>
     <div class="wrapper">
+        <label for="ticket_summary">Ticket Summary</label>
         <textarea name="ticket_summary" id="ticket_summary" cols="50" rows="6" placeholder="describe the issue here"></textarea>
+        <label for="ticket_action">Action Taken</label>
         <textarea name="ticket_action" id="ticket_action" cols="50" rows="6" placeholder="describe the action taken here"></textarea>
+        <label for="further_action">Further Action Required</label>
         <textarea name="further_action" id="further_action" cols="50" rows="3" placeholder="describe further action needed here"></textarea>
-        <input name="ticket_labels" id="ticket_labels" placeholder="comma seperated labels"></input>
+        <input name="ticket_labels" id="ticket_labels" placeholder="comma separated labels"></input>
         <input name="account_type" id="account_type" placeholder="type of account"></input>
         <button id="ticket_submit">Save</button>
     </div>
