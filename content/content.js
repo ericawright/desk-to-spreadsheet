@@ -18,8 +18,12 @@ chromeps.subscribe('commands', function(message) {
 });
 
 function get_content(){
+    var date = $('.date')[0].innerHTML;
+    var formatted_date = new Date(date.trim().replace(/st|rd|th|at.*$/g, ''));
+    var m_d_y_date = ((formatted_date.getMonth() + 1) + '/' + formatted_date.getDate() + '/' +  formatted_date.getFullYear());
+
     var subject = $('#ticket_subject').val();
     var direct_link = $('.agent_ticket_section input[name="direct_link[subject]"]').val();
     var customer_name = $('.idtab[data-tab="customer"] .a-details.a-ellipsis').text();
-    chromeps.publishActive('commands', {'store_info': {subject: subject, direct_link: direct_link, customer_name: customer_name}});
+    chromeps.publishActive('commands', {'record_info': {subject: subject, direct_link: direct_link, customer_name: customer_name, date: m_d_y_date}});
 }
