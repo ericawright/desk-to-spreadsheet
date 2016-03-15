@@ -2,7 +2,7 @@
   "manifest_version": 2,
  
   "name": "Desk Scrape",
-  "description": "EAsily transfer info from Desk to Google docs",
+  "description": "Easily transfer info from Desk to Google docs",
   "version": "1.0.0",
  
   "browser_action": {
@@ -16,7 +16,7 @@
 
   "content_scripts": [
     {
-      "matches": ["<all_urls>",  "http://*/*", "https://*/*"],
+      "matches": ["https://support.mobify.com/agent"],
       "js": ["libraries/zepto.js", "libraries/chromeps.js", "content/content.js"],
       "css": ["content/content.css"],
       "all_frames": false
