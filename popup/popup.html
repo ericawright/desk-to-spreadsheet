@@ -1,19 +1,18 @@
 <!doctype html>
 <html>
 <head>
-  <link rel='stylesheet' href='popup.css'>
+    <link rel="stylesheet" href="popup.css">
 </head>
 <body>
-  <div class='overlay'></div>
-  <div class='wrapper'>
-    <input type='text' id='ticket_notes'>
-    </input>
-    <input type='submit' id='ticket_submit'>
-    </input>
-  </div>
+    <div class="overlay"></div>
+    <div class="wrapper">
+        <textarea name="ticket_summary" id="ticket_summary" cols="50" rows="6" placeholder="describe the issue here"></textarea>
+        <textarea name="ticket_action" id="ticket_action" cols="50" rows="6" placeholder="describe the action taken here"></textarea>
+        <button id="ticket_submit">Save</button>
+    </div>
 
-  <script src='../libraries/zepto.js'></script>
-  <script src='../libraries/chromeps.js'></script>
-  <script src='popup.js'></script>
+    <script src="../libraries/zepto.js"></script>
+    <script src="../libraries/chromeps.js"></script>
+    <script src="popup.js"></script>
 </body>
 </html>
