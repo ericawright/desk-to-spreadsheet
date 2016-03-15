@@ -26,3 +26,7 @@ $('#ticket_submit').on('click', function(){
     localStorage.setItem('account_type', account_type);
     localStorage.setItem('labels', labels);
 });
+
+$('.overlay').on('click', function(){
+    chromeps.publishActive('commands', "toggle_open");
+});

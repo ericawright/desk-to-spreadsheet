@@ -7,7 +7,7 @@ iframe.style.display = 'none';
 document.body.appendChild(iframe);
 
 chromeps.subscribe('commands', function(message) {
-    if (message === 'toggle-open') {
+    if (message === 'toggle_open') {
         if (iframe.style.display == 'none'){
             iframe.style.display = 'initial';
             get_content();
