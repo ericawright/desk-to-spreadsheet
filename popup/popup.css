@@ -24,6 +24,11 @@ textarea {
     line-height: 1.1em; 
 }
 
+input {
+    width: 60%;
+    margin: 2%;
+}
+
 #ticket_submit {
     position: absolute;
     background: #9d76d2;

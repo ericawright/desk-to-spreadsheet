@@ -25,5 +25,7 @@ function get_content(){
     var subject = $('#ticket_subject').val();
     var direct_link = $('.agent_ticket_section input[name="direct_link[subject]"]').val();
     var customer_name = $('.idtab[data-tab="customer"] .a-details.a-ellipsis').text();
-    chromeps.publishActive('commands', {'record_info': {subject: subject, direct_link: direct_link, customer_name: customer_name, date: m_d_y_date}});
+    var company = $('.idtab[data-tab="company"] .a-details.a-ellipsis').text();
+
+    chromeps.publishActive('commands', {'record_info': {subject: subject, direct_link: direct_link, customer_name: customer_name, date: m_d_y_date, company: company}});
 }
