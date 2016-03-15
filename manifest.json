@@ -1,32 +1,37 @@
 {
-  "manifest_version": 2,
- 
-  "name": "Desk Scrape",
-  "description": "Easily transfer info from Desk to Google docs",
-  "version": "1.0.0",
- 
-  "browser_action": {
-  },
-  
-  "options_page": "options/options.html",
+    "manifest_version": 2,
 
-  "background": {
-    "scripts": ["libraries/zepto.js","libraries/chromeps.js","content/background.js"]
-  },
+    "name": "Desk Scrape",
+    "description": "Easily transfer info from Desk to Google docs",
+    "version": "1.0.0",
 
-  "content_scripts": [
-    {
-      "matches": ["https://support.mobify.com/agent"],
-      "js": ["libraries/zepto.js", "libraries/chromeps.js", "content/content.js"],
-      "css": ["content/content.css"],
-      "all_frames": false
+    "browser_action": {},
+
+    "options_page": "options/options.html",
+
+    "background": {
+        "scripts": ["libraries/zepto.js","libraries/chromeps.js","content/background.js"]
+    },
+
+    "content_scripts": [
+        {
+            "matches": ["https://support.mobify.com/agent"],
+            "js": ["libraries/zepto.js", "libraries/chromeps.js", "content/content.js"],
+            "css": ["content/content.css"],
+            "all_frames": false
+        },
+        {
+            "matches": ["https://docs.google.com/spreadsheets/d/13ud9o9kxn_U0Y-W9LuflfIMl3ZNSc4t37BUkTsiDsyc/edit"],
+            "js": ["libraries/zepto.js", "libraries/chromeps.js", "content/docs-content.js"],
+            "css": ["content/content.css"],
+            "all_frames": false
+        }
+    ],
+
+    "web_accessible_resources" : ["popup/popup.html"],
+
+    "permissions": [
+        "tabs"
+    ]
+
     }
-  ],
-
-  "web_accessible_resources" : ["popup/popup.html"],
-
-  "permissions": [
-    "tabs"
-  ]
-  
-}
